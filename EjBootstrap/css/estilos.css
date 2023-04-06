@@ -1,0 +1,63 @@
+.txt_negrita {
+	font-weight: bold;
+} 
+
+.lrs li {
+	list-style: none;
+	display: inline-block;
+} 
+
+.lrs li a {
+	padding-right: 5px;
+} 
+
+.mtpnc {
+	margin-top: 115px;
+}
+
+.mbtodt {
+    	display: none;
+    	margin-bottom: 15px;
+}
+
+
+@media screen and (min-width: 315px) {  
+    
+    .mbtodt {
+    	display: block;
+	}
+
+	.btodt {
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 992px) {  
+    
+    .mbtodt {
+    	display: none;
+	}
+
+	.btodt {
+		display: block;
+	}
+
+}
+
+.fad {
+	margin-bottom: 8px;
+	display: none;
+}
+
+.negrita2{
+	font-weight: bold;
+}
+
+.mtga {
+	padding-top: 8px;
+}
+
+.tvpjq {
+	text-align:justify; 
+}
