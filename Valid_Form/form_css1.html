@@ -9,20 +9,20 @@
   <body>
     <div class="center">
       <h1>Login</h1>
-      <form method="post" autocomplete="off">
+      <form method="" name="frmlogin" id="frmlogin">
         <div class="txt_field">
           <label>Nombre Usuario</label>
-          <input type="text" name="usuario" id="usuario"/>
+          <input type="text" name="usuario" id="usuario" required/>
         </div>
 
         <div class="txt_field">
-          <label>Correo Electrónico</label>
-          <input type="email" name="correo" id="correo"/>
+          <label>Correo</label>
+          <input type="email" name="userMail" id="userMail"/>
         </div>
 
         <div class="txt_field">
           <label for="userPassword">Contraseña</label>
-          <input type="password" name="password" id="password"/>         
+          <input type="password" name="userPass" id="userPass" required/>         
         </div>
 
         <input type="submit" value="Iniciar Sesión">
