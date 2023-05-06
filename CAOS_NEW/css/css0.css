@@ -11,7 +11,7 @@ body{
     height: 100vh;
     overflow:visible;
     font-family: 'Times New Roman', Times, serif;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
   }
 /*
 nav{
