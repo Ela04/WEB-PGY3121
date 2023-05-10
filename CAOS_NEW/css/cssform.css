@@ -1,45 +1,57 @@
-.input{
+/* Con fondo
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  padding: 5%;
+  background-image: linear-gradient(rgba(129, 0, 6, 0.9),rgba(129, 0, 6, 0.9)), url(/img/si.jpg);  
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+.barra{
+  width: 100%;
+  max-width: 700px;
+  background: rgba(129, 0, 6, 0.9);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px), saturate(180%);
+}
+
+.barra input{
+  background: transparent;
+  flex: 1;
+  border: 0;
   outline: none;
-  box-sizing:border-box;
-  height: 60px;
-  width: 0;
-  padding: 0 20px;
-  color: rebeccapurple;
-  border-radius: 50px;
+  padding: 24px 20px;
   font-size: 20px;
-  border: 1px solid red;
-  transition: all .7s ease;
+  color:#cac7ff;
 }
 
 ::placeholder{
-  color: grey;
+  color:#cac7ff
 }
 
-.btn{
-  position: absolute ;
-  right: 0;
-  top: 0;
-  width: 80px;
-  height: 80px;
-  background:#ff0000;
-  line-height: 80px;
+.barra button img{
+  width: 25px;
+}
+
+.barra button{
+  border:0;
   border-radius: 50%;
-  text-align: center;
-  cursor: pointer;
-  transition: .5s;
-}
-
-.btn i {
-  font-size: 25px;
-  color:white;
-  line-height: 80px;
-  transition: all .7 ease;
-}
-
-.container:hover i {
-  transform: rotate(- 360deg);
-}
-
-.btn:hover{
-  background: ff0000;
+  width: 60px;
+  height: 60px;
+  background: #9b5858; 
+  cursor:pointer;
 }

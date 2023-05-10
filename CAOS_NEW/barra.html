@@ -7,64 +7,12 @@
   <link rel="stylesheet" href="css/cssform.css">
   <title>Barra</title>
 </head>
-<style>
-  *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
-  }
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #232323;
-  }
-  container{
-    position:relative;
-  }
-  input{
-    width: 350%;
-    padding: 10px;
-    padding-right: 35px;
-    border-radius: 5px;
-    border: 5px;
-    outline: none;
-    font-size: 1rem;
-  }
-  button{
-    background: rgb(255, 0, 0);
-    padding: 10px 15px;
-    position: absolute;
-    border: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-    border-radius: 0 5px 5px 0;
-    color:#fff;
-    cursor:pointer;
-  }
-  button:hover{
-    background-color: white;
-  }
-  p{
-    color:whitesmoke
-  }
-  h1{color:#fff;}
-
-</style>
 <body>
-  <div><h1>BARRA</h1></div>
-  <p>
-
-  </p>
   <div class="container">
-    <input type="text" placeholder="Buscar...">
-    <button>
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
+      <form action="https://www.google.com/search" method="get" class="barra">
+        <input type="text" placeholder="Buscar..." name="b">
+        <button type="submit"><img src="/img/search.png" alt=""></button>
+      </form>
   </div>
-  
 </body>
 </html>
