@@ -14,7 +14,7 @@ body{
 
 
 .center{
-  position: absolute;
+  position:absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -59,7 +59,7 @@ form .txt_field{
 .txt_field label{
   position: relative;
   top: 50%;
-  left: 5px;
+  left: 10px;
   color: #adadad;
   font-size: 16px;
   pointer-events: none;
@@ -102,4 +102,12 @@ input[type="submit"]:hover{
 
 .link_Ayuda a:hover{
   text-decoration: underline;
+}
+
+.warnings{
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: darkred;
+  padding-top: 20px;
 }
