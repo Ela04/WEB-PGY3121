@@ -9,4 +9,8 @@ git commit -m "comentario"
 git checkout main
 git merge estudiante
 git push u- origin estudiante
+<<<<<<< HEAD
+git push
+=======
 git pull
+>>>>>>> eff97a91d8ab18de94d089b61f902a505bb28514
