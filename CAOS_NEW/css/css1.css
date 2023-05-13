@@ -73,8 +73,15 @@ header.abajo .logo,
 header.abajo ul li a{
     color: #000;
 }
+
+.container{
+    text-align: center;
+}
 h1{
     color:#fff
+}
+h2{
+    color:dimgray
 }
 p{
     color:whitesmoke
