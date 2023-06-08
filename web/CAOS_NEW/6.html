@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+  <!--bootstrap-->
+  <link rel="stylesheet" href="/css/mystyles.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+
+  
+  
+  
+  
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/css1.css">
+  <title>Home</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #4b4a4a, #050202);
+      height: 100vh;
+      overflow: visible;
+    }
+
+    h1 {
+      color: white;
+      size: 50px;
+    }
+
+    p {
+      color: white;
+    }
+
+    .btn:hover{
+      background-color: aqua;
+    }
+
+    
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBC</title>
+
+  <meta charset="UTF-8">
+  <title>Carrusel automático en HTML</title>
+  <style>
+    /* #carousel {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    #carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    } */
+
+    /* #carousel img.active {
+      opacity: 1;
+    } */
+
+    img {
+      width: 50%;
+    }
+
+    .center-img {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <script>
+    var intervalo = 5000; // tiempo en milisegundos
+    var i = 0;
+    var imagenes = document.querySelectorAll('#carousel_img');
+    var cantidad = imagenes.length;
+
+    // ocultar todas las imágenes excepto la primera
+    Array.prototype.forEach.call(imagenes, function (img, index) {
+      if (index !== 0) {
+        img.style.opacity = 0;
+      }
+    });
+
+    // setInterval(function () {
+    //   imagenes[i].classList.remove('active');
+    //   i = (i + 1) % cantidad;
+    //   imagenes[i].classList.add('active');
+    // }, intervalo);
+  </script>
+  <style>
+    .bloque-color {
+    background-color: #3d3d3d;
+    padding: 20px;
+}
+
+.bloque-color p {
+    color: #fcfafa;
+}
+
+  </style>
+  <div>
+
+  </div>
+  <style>
+  body {
+    overflow: auto;
+  }
+  </style>
+
+<style>
+ 
+    .bloque-color {
+    background-color: #464646;
+    padding: 20px;
+}
+
+.bloque-color p {
+    color: #fcfafa;
+}
+
+  </style>
+  <style>
+    
+  </style>
+    <style>
+      p {
+        text-align: center;
+      }
+    </style>
+
+<style>
+  p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+<style>
+  h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+<style>
+  img {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px; ;
+    height: 250px;
+  }
+</style>
+<style>
+  a {
+    position: absolute;
+    top: 90%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+    
+    
+    
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div>
+    <h1>¿Google colaboracion con bard?</h1>
+    
+
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-md-4">
+          <div class="bloque-color in">
+          <p>
+            
+          Se abre a 180 países“Ahora tenemos una visión más profunda viside hacer la IA más útil para todos”, dijo Sundar Pichai, CEO de Google.
+          Esta tecnologica ha salido a reclamar ante el público que desde 2016 se declaró una compañía ‘Primero IA’ que ha involucrado capacidades de inteligencia artificial en productos como Gmail, Google Maps, el buscador y Google Fotos.
+
+          Pero en los últimos meses, la compañía se ha visto acorralada por OpenAI, un naciente competidor respaldado por Microsoft que sacó al aire ChatGPT, un chatbot de inteligencia artificial que alcanzó rápidamente a 100 millones de usuarios.Google ha desvelado en su sede principal en Mountain View (Estados Unidos), donde se lleva a cabo su conferencia para desarrolladores Google I/O, más de un centenar de nuevas funcionalidades que involucran inteligencia artificial (IA), incluyendo la apertura de Bard, su respuesta a ChatGPT, a más de 180 países.
+
+          Esta tecnologica ha salido a reclamar ante el público que desde 2016 se declaró una compañía ‘Primero IA’ que ha involucrado capacidades de inteligencia artificial en productos como Gmail, Google Maps, el buscador y Google Fotos.
+
+          Pero en los últimos meses, la compañía se ha visto acorralada por OpenAI, un naciente competidor respaldado por Microsoft que sacó al aire ChatGPT, un chatbot de inteligencia artificial que alcanzó rápidamente a 100 millones de usuarios.
+
+
+
+          En medio de ese candente ambiente, Google lanzó Bard, su propio modelo inteligente que fue objeto de burlas tras haber sido puesto a disposición de manera limitada en inglés para Estados Unidos.
+
+          Ahora, Google está relanzando Bard en más de 180 países, con más capacidades y nuevas funcionalidades, esperando mostrarse fuerte en la guerra de la inteligencia artificial. Inicialmente está inglés pero afirman que están trabajando para que pueda soportar más de 40 idiomas, incluyendo el español.
+
+          “En Gmail empezamos con las respuestas inteligentes, luego introducimos una funcionalidad que te ayudaba a hacer frases y ahora Gmail tiene una varita mágica que te ayuda a responder un correo en el que pides una devolución, aumentando tus posibilidades de que obtengas la devolución”, describió el CEO de Google Sundar Pichai, durante su presentación en el Google I/O, para dar un ejemplo de la evolución que la IA tiene en sus productos. “Tenemos 15 productos que sirven cada uno a más de 500.000 personas cada uno, dando forma a nuestra misión de organizar la información del mundo y hacerla accesible a todos. Ahora tenemos una visión más profunda de hacer la IA más útil para todos”.
+
+
+            
+            
+            
+            
+          </p>
+        </div>
+          
+          <img src="/img/google.png" alt="" height="250" class="rounded-circle">
+      </div>
+    
+      </div>
+  </div>
+  
+    
+  </div>
+
+<div>
+<a class="btn" style="color: #fcfafa;" href="1.html">Volver</a>
+</div>
+
+</body>
+
+</html>
