@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,17 +11,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/css1.css">
-    <title>CAOS NEW</title>
+    <link rel="stylesheet" href="{% static 'css/css1.css' %}">
+    <title>{% block title %}{% endblock %}</title>
   </head>
 
   <body>
     <!-- MENU -->
     <header>
-      <a href="#" class="logo"> CAOS NEW</a>
+      <a href="" class="logo">
+        <img src="{%static '/skrat/alumnos/static/img/paper.png'%}" alt="">
+      </a>
       <nav>
           <ul class="menu">
-            <li><a href="0.html">INICIO</a></li>
+            <li><a href="{%static '/skrat/alumnos/templates/Base.html'%}">INICIO</a></li>
             <li><a href="#">NOSOTROS</a></li>
             <li><a href="#">CONTACTANOS</a></li>
             <li><a href="formulario.html">REGISTRATE</a></li>
@@ -82,11 +85,7 @@
                 
                 La aprobación de la vacuna de Sinopharm se suma a las otras vacunas que ya han sido aprobadas por la OMS, como las de Pfizer-BioNTech, Moderna, AstraZeneca y Johnson & Johnson. Esto amplía las opciones de vacunación para los países que luchan por obtener suministros suficientes para sus poblaciones.
                 
-                Esta noticia es importante porque la aprobación de la vacuna de Sinopharm por parte de la OMS es un paso más hacia la erradicación de la pandemia de COVID-19 en todo el mundo, especialmente en países de bajos y medianos ingresos. Además, la aprobación de más vacunas puede ayudar a aumentar la confianza en las vacunas y fomentar la aceptación y la vacunación en todo el mundo.
-                
-                
-                
-                
+                Esta noticia es importante porque la aprobación de la vacuna de Sinopharm por parte de la OMS es un paso más hacia la erradicación de la pandemia de COVID-19 en todo el mundo, especialmente en países de bajos y medianos ingresos. Además, la aprobación de más vacunas puede ayudar a aumentar la confianza en las vacunas y fomentar la aceptación y la vacunación en todo el mundo.   
                 
               </p>
             </div>
@@ -152,11 +151,11 @@
     
     </div>
     </section>
-    <section>
+    <!-- <section>
       <h1>Hello, world!</h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, illum, sint id ipsum harum alias eaque aliquid blanditiis, veritatis deserunt modi ex aspernatur nulla provident esse magni possimus tempora rerum eveniet expedita unde quo laboriosam minima? Porro molestias repellendus voluptate.
       </p>
-    </section>
+    </section> -->
 
     
     <!-- Option 1: Bootstrap Bundle with Popper -->
