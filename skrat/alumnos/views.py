@@ -11,5 +11,5 @@ from django.http import HttpResponse
 from django.template import loader
 
 def alumnos(request):
-  template = loader.get_template('1.html')
+  template = loader.get_template('Base.html')
   return HttpResponse(template.render())

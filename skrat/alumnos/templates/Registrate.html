@@ -1,0 +1,31 @@
+{% extends "./Base.html" %}
+{% load static %}
+{% block title %} REGISTRATE {% endblock %}
+
+{% block body %}
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post">
+      <div class="txt_field">
+        <label>Nombre Usuario</label>
+        <input type="text">
+      </div>
+
+      <div class="txt_field">
+        <label for="userPassword">Contraseña</label>
+        <input type="password">         
+      </div>
+
+      <input type="submit" value="Iniciar Sesión">
+
+      <div class="link_Ayuda">
+        Olvido Contraseña? <a href="#">Clic Aquí</a>
+      </div>
+
+      <div class="link_Ayuda">
+        No Tiene Cuenta? <a href="#">Registrar</a>
+      </div>
+
+    </form>
+  </div>
+{% endblock %}
