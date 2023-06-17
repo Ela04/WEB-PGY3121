@@ -11,4 +11,14 @@ urlpatterns = [
     path('Nosotros', views.Nosotros, name='Nosotros'),
     path('Noticias', views.Noticias, name='Noticias'),
     path('Registrate', views.Registrate, name='Registrate'),
+
+    #Crud
+    path('gestionoti', views.gestionoti, name='gestionoti'),
+    path('nuevanoti', views.nuevanoti, name='nuevanoti'),
+    path('editarnoti/<codigo>', views.editarnoti, name='editarnoti'),
+    path('eliminoti/<codigo>', views.eliminoti, name='eliminoti'),
+
+    #Gestion de usuarios
+    path('login', views.login, name='login'),
+    path('salir', views.salir, name='salir'),
 ]

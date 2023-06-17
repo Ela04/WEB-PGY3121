@@ -1,14 +1,13 @@
 from socket import fromshare
 from django import froms
-from .models import alumnos
+from .models import Noticias
 
 from django.forms import ModelForm
 #Para ingresar noticias
-class alumnosForm(ModelForm):
+class NoticiasForm(ModelForm):
     class Meta:
-        model= alumnos
-        #fields =['id','autor','nombre','fecha','contenido']
-        #
+        model= Noticias
+        fields =['codigo','autor','nombre','fecha','contenido', 'img']
         fields = "__all__"
 #Para ingresar al formulario
   

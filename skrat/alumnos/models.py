@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class AreaNoticia(models.Model):
+class AreaNoticias(models.Model):
   idArea = models.AutoField(db_column='idArea', primary_key=True) 
   Descripcion = models.CharField(max_length=30, blank=False, null=False)
 
@@ -14,7 +14,7 @@ class Noticias(models.Model):
   nombre = models.CharField(max_length=50, verbose_name='nombre')
   fecha = models.DateField(auto_now=False, verbose_name='fecha')
   Contenido = models.CharField(max_length=255, verbose_name='Contenido')
-  idArea = models.ForeignKey('AreaNoticia',on_delete=models.CASCADE, db_colum='idArea', verbose_name='idArea')
+  idArea = models.ForeignKey('AreaNoticias',on_delete=models.CASCADE, db_colum='idArea', verbose_name='idArea')
   img =models.ImageField(upload_to='img/', null=True, blank=True,verbose_name='img')
   #Funcion para
   def __str__(self):
