@@ -26,9 +26,27 @@ def gestionoti(request):
 
 #Crud -> Crear, Leer, Actualizar y Borrar
 def nuevanoti(request):
-  fromulario = NoticiasForm(request.post )
+    formulario = NoticiasForm(request.POST or None, request.FILES or None)
+    if formulario.is_valid():
+       formulario.save()
+       return redirect('gestionoti')
+    return render(request, "alumnos/templates/gestion/nuevanoti.html", {"formulario": formulario})
+
+def editarnoti(request, codigo):
+    Noticias = Noticias.objects.get(codigo=codigo)
+    formulario = NoticiasForm(request.POST or None, request.FILES or None, instance=Noticias)
+    if formulario.is_valid() and request.POST:
+       formulario.save()
+       return redirect('gestionoti')
+    return render(request, "alumnos/templates/gestion/editarnoti.html", {"formulario": formulario})
+
+def eliminoti(request, codigo):
+    Noticias = Noticias.objects.get(codigo=codigo)
+    Noticias.delete()
+    messages.success(request, '¡Noticia Eliminada!')
+    return redirect('gestionoti')
 
 
 def salir(request):
-    salir = loguot.
-    return,
+    salir = loguot
+    return render(loguot)

@@ -30,17 +30,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for cur in cursos %}
+                        {% for not in noticias %}
                         <tr>
-                            <td>{{cur.codigo}}</td>
-                            <td>{{cur.nombre}}</td>
-                            <td>{{cur.sence}}</td>
-                            <td>{{cur.idArea}}</td>
-                            <td>{{cur.modalidad}}</td>
-                            <td>{{cur.horas}}</td>
-                            <td><img src="{{cur.img.url}}" alt="" width="50px"></td>
-                            <td><a href="editarcur/{{cur.codigo}}" class="btn btn-primary">Editar </a></td>
-                            <td><a href="borrarcur/{{cur.codigo}}" class="btn btn-danger btnEliminacion">Eliminar</a></td> 
+                            <td>{{not.codigo}}</td>
+                            <td>{{not.autor}}</td>
+                            <td>{{not.nombre}}</td>
+                            <td>{{not.fecha}}</td>
+                            <td>{{not.contenido}}</td>                        
+                            <td><img src="{{not.img.url}}" alt="" width="50px"></td>
+                            <td><a href="editarnoti/{{not.codigo}}" class="">Editar </a></td>
+                            <td><a href="eliminoti/{{not.codigo}}" class="">Eliminar</a></td> 
                         </tr>
                         {% endfor %}
                     </tbody>

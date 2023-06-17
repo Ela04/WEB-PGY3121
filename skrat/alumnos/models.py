@@ -16,11 +16,13 @@ class Noticias(models.Model):
   Contenido = models.CharField(max_length=255, verbose_name='Contenido')
   idArea = models.ForeignKey('AreaNoticias',on_delete=models.CASCADE, db_colum='idArea', verbose_name='idArea')
   img =models.ImageField(upload_to='img/', null=True, blank=True,verbose_name='img')
+  
   #Funcion para
   def __str__(self):
     return str(self.fecha)
   class Meta:
     ordening =['fecha']
+
   #Funcion para eliminar
   def delete(self, using=None, keep_parents=False):
     self.img.storage.delete(self.img.name)
