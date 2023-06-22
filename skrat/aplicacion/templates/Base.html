@@ -20,14 +20,15 @@
     <!-- BARRA DE ARRIBA -->
     <header>
       <a href="" class="logo">
-        <img src="{%static '/skrat/alumnos/static/img/paper.png'%}" alt="">
+        <img src="{%static 'skrat/alumnos/static/img/paper.png'%}" alt="">
       </a>
       <nav>
           <ul class="menu">
-            <li><a href="{%static '/skrat/alumnos/templates/Carrucel.html'%}">INICIO</a></li>
-            <li><a href="{%static '/skrat/alumnos/templates/Noticias.html'%}">NOTICIAS</a></li>
-            <li><a href="{%static '/skrat/alumnos/templates/Nosotros.html'%}">NOSOTROS</a></li>
-            <li><a href="{%static '/skrat/alumnos/templates/Registrate.html'%}">REGISTRATE</a></li>
+            <li><a href="{% url 'home'%}">INICIO</a></li>
+            <li><a href="{% url 'Noticias'%}">NOTICIAS</a></li>
+            <li><a href="{% url 'Nosotros'%}">NOSOTROS</a></li>
+            <li><a href="{% url 'Registrate'%}">REGISTRATE</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Login</a></li>
           </ul>
       </nav>
     </header>

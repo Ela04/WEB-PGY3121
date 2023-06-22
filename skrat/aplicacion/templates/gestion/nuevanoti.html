@@ -1,5 +1,5 @@
-{% extends "../base.html" %}
-{% block title %} Nueva|Noticia {% endblock %}
+{% extends "./base.html" %}
+{% block title %} Nueva | Noticia {% endblock %}
 {% block body %}
 
     <div class="col-sm-12">
@@ -14,8 +14,7 @@
 
             <h1>Nuevo Registro</h1>
             <div class="container form">
-                {% include 'alumnos/gestion/form.html' %}
+                {% include 'aplicacion/gestion/form.html' %}
             </div>
     </div>
-
 {% endblock %}

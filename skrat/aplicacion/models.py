@@ -17,7 +17,7 @@ class Noticias(models.Model):
   idArea = models.ForeignKey('AreaNoticias',on_delete=models.CASCADE, db_colum='idArea', verbose_name='idArea')
   img =models.ImageField(upload_to='img/', null=True, blank=True,verbose_name='img')
   
-  #Funcion para
+  #Funcion para ordenar por la fecha
   def __str__(self):
     return str(self.fecha)
   class Meta:
