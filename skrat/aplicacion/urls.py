@@ -4,12 +4,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    #path('alumnos/', views.alumnos, name='alumnos'),
     path('', views.home, name='home'),
     path('Carrucel', views.Carrucel, name='Carrucel'),
     path('Nosotros', views.Nosotros, name='Nosotros'),
     path('Noticias', views.Noticias, name='Noticias'),
-    path('Registrate', views.Registrate, name='Registrate'),
+    #path('Registrate', views.Registrate, name='Registrate'),
 
     #Crud
     path('gestionoti', views.gestionoti, name='gestionoti'),
@@ -18,6 +17,8 @@ urlpatterns = [
     path('eliminoti/<codigo>', views.eliminoti, name='eliminoti'),
 
     #Gestion de usuarios
-    path('login', views.login, name='login'),
-    path('salir', views.salir, name='salir'),
+    #path('login', views.login, name='login'),
+    #path('salir', views.salir, name='salir'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from django.template import Noticias, AreaNoticias
+from .models import Noticias, AreaNoticias
 from django.contrib import messages
-from django import logout
+#from django.contrib import logout
 from .forms import NoticiasForm
 
 #from django.http import HttpResponse
@@ -15,15 +15,16 @@ def home(request):
   return render(request,'home.html')
 
 def Carrucel(request):
-  return render(request,'aplicacion/templates/Carrucel.html')
+  return render(request,'Carrucel.html')
 
 def Nosotros(request):
-  return render(request,'aplicacion/templates/Nosotros.html')
+  return render(request,'Nosotros.html')
 
 def Noticias(request):
-  Noticias = Noticias.objects.all()
-  context ={"Noticias":Noticias}
-  return render(request,'aplicacion/templates/Noticias.html', context)
+  Noticia = Noticias.ob
+  #context ={"Noticias":Noticia}
+  context ={"Noticias":'Juan Pe'}
+  return render(request,'Noticias.html',context)
 
 
 
@@ -31,7 +32,7 @@ def Noticias(request):
 def gestionoti(request):
   Noticias = Noticias.objects.all()
   context = {"Noticias": Noticias}
-  return render(request,'aplicacion/templates/gestion/gestionoti.html', context)
+  return render(request,'gestion/gestionoti.html', context)
 
 
 
@@ -41,7 +42,7 @@ def nuevanoti(request):
     if formulario.is_valid():
        formulario.save()
        return redirect('gestionoti')
-    return render(request, "aplicacion/templates/gestion/nuevanoti.html", {"formulario": formulario})
+    return render(request, "gestion/nuevanoti.html", {"formulario": formulario})
 
 def editarnoti(request, codigo):
     Noticias = Noticias.objects.get(codigo=codigo)
@@ -49,7 +50,7 @@ def editarnoti(request, codigo):
     if formulario.is_valid() and request.POST:
        formulario.save()
        return redirect('gestionoti')
-    return render(request, "aplicacion/templates/gestion/editarnoti.html", {"formulario": formulario})
+    return render(request, "gestion/editarnoti.html", {"formulario": formulario})
 
 def eliminoti(request, codigo):
     Noticias = Noticias.objects.get(codigo=codigo)
@@ -58,6 +59,6 @@ def eliminoti(request, codigo):
     return redirect('gestionoti')
 
 
-def salir(request):
-    salir = logout
-    return render(logout)
+#def salir(request):
+#    salir = logout
+#    return render(logout)

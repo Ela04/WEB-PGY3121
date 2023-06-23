@@ -7,17 +7,19 @@
         <h1>Noticias!</h1>
     </div>
     <div>
-        <a href="{%url 'gestionoti'%}"></a>
+        <a href="{% url 'gestionoti' %}"></a>
     </div>
     <div>
         <div class="row">
-            {% for cur in cursos %}
-    
+            {% for not in Noticias %}
+
+                <div class="bloque-color">
+                    <p>
+                        {{not.Noticias}}
+                    </p>
+                </div>
+
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
-
-<div class="bloque-color">
-    <p>¡Bienvenidos a nuestra página de noticias! Aquí encontrarás las noticias más importantes del día, desde política hasta deportes, pasando por tecnología y entretenimiento. Estamos comprometidos en mantenerte informado con información veraz y actualizada. Nuestro equipo de periodistas y corresponsales trabaja arduamente para brindarte la mejor cobertura de los eventos más relevantes a nivel local e internacional. Además, ofrecemos análisis y opiniones de expertos en distintas áreas para que puedas entender mejor los acontecimientos que están ocurriendo en el mundo. ¡Gracias por visitarnos y esperamos que disfrutes de nuestra página!
-    </p>
-</div>
