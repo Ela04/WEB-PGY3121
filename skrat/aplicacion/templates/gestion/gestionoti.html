@@ -1,0 +1,50 @@
+{% extends "./base.html" %}
+{% block title %} Gestión de Artículo {% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="">
+                <strong class="">{{ message }}</strong>
+            </div>
+            {% endfor %}
+            {% endif %}
+            
+            <h1>Listado de Noticias</h1>
+            <div class="">
+                <a href="{% url 'nuevanoti' %}" class="">Agregar Noticia</a>
+              </div>
+
+            <div class="">
+                <table class="">
+                    <thead>
+                        <tr>
+                            <th>CODIGO</th>
+                            <th>AUTOR</th>
+                            <th>NOMBRE</th>
+                            <th>FECHA</th>
+                            <th>CONTENIDO</th>
+                            <th>IMG</th>
+                            <th colspan="6">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for not in noticias %}
+                        <tr>
+                            <td>{{not.codigo}}</td>
+                            <td>{{not.autor}}</td>
+                            <td>{{not.nombre}}</td>
+                            <td>{{not.fecha}}</td>
+                            <td>{{not.contenido}}</td>                        
+                            <td><img src="{{not.img.url}}" alt="" width="50px"></td>
+                            <td><a href="editarnoti/{{not.codigo}}" class="">Editar </a></td>
+                            <td><a href="eliminoti/{{not.codigo}}" class="">Eliminar</a></td> 
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

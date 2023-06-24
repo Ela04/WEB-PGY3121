@@ -1,0 +1,47 @@
+{% extends "./Base.html" %}
+
+{% block title %} H O M E {% endblock %}
+
+{% block body %}
+{% load static %}
+<!-- CARRUSEL AQUI -->
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <a href="Noticias.html"><img src="{% static 'img/google.png' %}" class="w-100 d-block" alt="First slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>¡Google vuelca todos sus productos hacia la IA; Bard!</h5>
+                <p>¡Toca la imagen para ver mas!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="Noticias.html"><img src="{% static 'img/guerra.avif' %}" class="w-100 d-block" alt="Second slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>¡Guerra en ucrania!</h5>
+                <p>¡Toca la imagen para ver mas!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href=""><img src="{% static 'img/redbullS.avif' %}" class="w-100 d-block" alt="Third slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>¡GP de Miami 2023 | Max Verstappen gana la carrera seguido de Checo Pérez y Fernando Alonso!</h5>
+                <p>¡Toca la imagen para ver mas!</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+{% endblock %}
