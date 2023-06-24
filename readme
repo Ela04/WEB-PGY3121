@@ -9,8 +9,5 @@ git commit -m "comentario"
 git checkout main
 git merge estudiante
 git push u- origin estudiante
-<<<<<<<<< Temporary merge branch 1
 git push
-=========
 git pull
->>>>>>>>> Temporary merge branch 2
