@@ -15,7 +15,7 @@ class Noticias(models.Model):
   fecha = models.DateField(auto_now=False, verbose_name='fecha')
   Contenido = models.CharField(max_length=255, verbose_name='Contenido')
   idArea = models.ForeignKey('AreaNoticias',on_delete=models.CASCADE, db_column='idArea', verbose_name='idArea')
-  img =models.ImageField(upload_to='img/', null=True, blank=True,verbose_name='img')
+  img =models.ImageField(upload_to='media/img/', null=True, blank=True,verbose_name='img')
   
   #Funcion para ordenar por el nombre
   def __str__(self):

@@ -5,6 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('Contactanos', views.Contactanos, name='Contactanos'),
     path('Nosotros', views.Nosotros, name='Nosotros'),
     path('Noticias', views.Noticiass, name='Noticias'),
     path('Registrate', views.Registrate, name='Registrate'),

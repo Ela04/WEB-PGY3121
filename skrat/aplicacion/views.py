@@ -6,6 +6,8 @@ from .forms import NoticiasForm
 
 def home(request):
   return render(request,'home.html')
+def Contactanos(request):
+   return render(request,'Contactanos.html')
 def Nosotros(request):
   return render(request,'Nosotros.html')
 def Registrate(request):
