@@ -6,7 +6,7 @@ from django.conf import settings
 urlpatterns = [
     path('', views.home, name='home'),
     path('Nosotros', views.Nosotros, name='Nosotros'),
-    path('Noticias', views.Noticias, name='Noticias'),
+    path('Noticias', views.Noticiass, name='Noticias'),
     path('Registrate', views.Registrate, name='Registrate'),
 
     #C R U D
