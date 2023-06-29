@@ -1,4 +1,6 @@
-{% extends "./base.html" %}
+<!--  I N D E X -->
+{% extends "./Base.html" %}
+
 {% block title %} Gestión de Artículo {% endblock %}
 {% block body %}
     <div class="row">
@@ -17,7 +19,7 @@
               </div>
 
             <div class="">
-                <table class="">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>CODIGO</th>
@@ -31,16 +33,16 @@
                     </thead>
                     <tbody>
                         {% for not in noticias %}
-                        <tr>
-                            <td>{{not.codigo}}</td>
-                            <td>{{not.autor}}</td>
-                            <td>{{not.nombre}}</td>
-                            <td>{{not.fecha}}</td>
-                            <td>{{not.contenido}}</td>                        
-                            <td><img src="{{not.img.url}}" alt="" width="50px"></td>
-                            <td><a href="editarnoti/{{not.codigo}}" class="">Editar </a></td>
-                            <td><a href="eliminoti/{{not.codigo}}" class="">Eliminar</a></td> 
-                        </tr>
+                            <tr>
+                                <td>{{not.codigo}}</td>
+                                <td>{{not.autor}}</td>
+                                <td>{{not.nombre}}</td>
+                                <td>{{not.fecha}}</td>
+                                <td>{{not.contenido}}</td>                        
+                                <td><img src="{{not.img.url}}" alt="" width="50px"></td>
+                                <td><a name="" id="" href="editarnoti/{{not.codigo}}" class="">Editar |</a></td>
+                                <td><a name="" id="" href="eliminoti/{{not.codigo}}" class="">Eliminar</a></td> 
+                            </tr>
                         {% endfor %}
                     </tbody>
                 </table>

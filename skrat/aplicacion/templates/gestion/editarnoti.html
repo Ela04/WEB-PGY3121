@@ -1,4 +1,5 @@
 {% extends "./Base.html" %}
+
 {% block title %} Gestión de Noticias {% endblock %}
 {% block body %}
     <div class="row">
@@ -12,11 +13,23 @@
                                 minlength="6" maxlength="6" readonly required>
                         </div>
                         <div class="form-group">
+                            <input type="text" id="txtAutor" name="txtAutor" value="{{not.autor}}" class="form-control" placeholder="Autor"
+                                minlength="6" maxlength="60" readonly required>
+                        </div>
+                        <div class="form-group">
                             <input type="text" id="txtNombre" name="txtNombre" value="{{not.nombre}}" class="form-control" placeholder="Nombre"
                                 maxlength="50" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="img" name="img" value="{{not.img}}" placeholder="img" value="1" required>
+                            <input type="date" id="date" name="date" value="{{not.fecha}}" class="form-control" placeholder=""
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="txtContenido" name="txtContenido" value="{{not.contenido}}" class="form-control" placeholder="Contenido"
+                                maxlength="2250" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="image" id="img" name="img" value="{{not.img}}" class="form-control" placeholder="img" required>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
