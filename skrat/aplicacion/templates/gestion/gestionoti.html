@@ -1,5 +1,5 @@
 <!--  I N D E X -->
-{% extends "./Base.html" %}
+{% extends "Base.html" %}
 
 {% block title %} Gestión de Artículo {% endblock %}
 {% block body %}
@@ -22,26 +22,27 @@
                 <table class="table">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>CODIGO</th>
                             <th>AUTOR</th>
                             <th>NOMBRE</th>
                             <th>FECHA</th>
                             <th>CONTENIDO</th>
-                            <th>IMG</th>
-                            <th colspan="6">Opciones</th>
+                            <th>IMG</th>                            
                         </tr>
                     </thead>
                     <tbody>
                         {% for not in noticias %}
                             <tr>
+                                <td>{{not.idArea}}</td>
                                 <td>{{not.codigo}}</td>
                                 <td>{{not.autor}}</td>
                                 <td>{{not.nombre}}</td>
                                 <td>{{not.fecha}}</td>
                                 <td>{{not.contenido}}</td>                        
                                 <td><img src="{{not.img.url}}" alt="" width="50px"></td>
-                                <td><a name="" id="" href="editarnoti/{{not.codigo}}" class="">Editar |</a></td>
-                                <td><a name="" id="" href="eliminoti/{{not.codigo}}" class="">Eliminar</a></td> 
+                                <td><a name="" id="" href="editarnoti/{{not.codigo}}" class="btn btn-primary">Editar |</a></td>
+                                <td><a name="" id="" href="eliminoti/{{not.codigo}}" class="btn btn-primary">Eliminar</a></td> 
                             </tr>
                         {% endfor %}
                     </tbody>
