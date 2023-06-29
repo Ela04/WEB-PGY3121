@@ -2,7 +2,6 @@
 
 {% block title %} Nueva | Noticia {% endblock %}
 {% block body %}
-  <!-- profe
     <div class="col-sm-12">
             {% if messages %}
             {% for message in messages %}
@@ -13,22 +12,9 @@
             {% endfor %}
             {% endif %}
 
-            <h1>Nuevo Registro</h1>
+            <h1>Nuevo Noticia</h1>
             <div class="container form">
                 {% include 'aplicacion/gestion/form.html' %}
             </div>
-    </div>
-    -->
-    <div class="card">
-        <div class="card-header">
-            Crear noticia
-        </div>
-        <div class="card-body">
-            <h4 class="card-title">Datos de la noticia</h4>
-            {% include 'Gestion/from.html'%}
-        </div>
-        <div class="card-footer text-muted">
-            Footer
-        </div>
     </div>
 {% endblock %}

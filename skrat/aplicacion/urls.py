@@ -11,9 +11,7 @@ urlpatterns = [
 
     #C R U D
     path('gestionoti', views.gestionoti, name='gestionoti'),
-    path('newnoti', views.newnoti, name='newnoti'),
     path('nuevanoti', views.nuevanoti, name='nuevanoti'),
-    path('ednoti', views.ednoti, name='ednoti'),
     path('editarnoti/<codigo>', views.editarnoti, name='editarnoti'),
     path('eliminoti/<codigo>', views.eliminoti, name='eliminoti'),
 

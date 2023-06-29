@@ -29,9 +29,6 @@ def nuevanoti(request):
        return redirect('gestionoti')
     return render(request, "gestion/nuevanoti.html", {"formulario": formulario})
 
-def newnoti(request):
-  return render(request,'gestion/nuevanoti.html')
-
 def editarnoti(request, codigo):
     Noti = Noticias.objects.get(codigo=codigo)
     formulario = NoticiasForm(request.POST or None, request.FILES or None, instance=Noti)
@@ -39,9 +36,6 @@ def editarnoti(request, codigo):
        formulario.save()
        return redirect('gestionoti')
     return render(request, "gestion/editarnoti.html", {"formulario": formulario})
-
-def ednoti(request):
-  return render(request,'gestion/editarnoti.html')
 
 def eliminoti(request, codigo):
     Notic = Noticias.objects.get(codigo=codigo)
