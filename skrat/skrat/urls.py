@@ -21,7 +21,9 @@ from django.conf import Settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('aplicacion.urls'))
+    path('', include('aplicacion.urls')),
+
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 print("PASO POR URLS DE SKRAT")

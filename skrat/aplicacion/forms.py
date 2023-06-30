@@ -10,3 +10,11 @@ class NoticiasForm(ModelForm):
         #fields =['codigo','autor','nombre','fecha','contenido', 'img']
         
         fields = "__all__"
+'''
+class NosotrosForm(ModelForm):
+    class Meta:
+        model= Nosotros
+        #fields =['codigo','autor','nombre','fecha','contenido', 'img']
+        
+        fields = "__all__"
+'''

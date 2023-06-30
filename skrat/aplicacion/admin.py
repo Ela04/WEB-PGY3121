@@ -4,4 +4,4 @@ from .models import Noticias, AreaNoticias
 # Register your models here.
 admin.site.register(Noticias)
 admin.site.register(AreaNoticias)
-
+#admin.site.register(Nosotros)
