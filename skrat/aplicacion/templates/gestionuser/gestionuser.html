@@ -1,0 +1,49 @@
+<!--  I N D E X -->
+{% extends "../Base.html" %}
+
+{% block title %} Gestión | Usuario {% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="">
+                <strong class="">{{ message }}</strong>
+            </div>
+            {% endfor %}
+            {% endif %}
+            
+            <h1>Listado de Usuarios</h1>
+            <div class="">
+                <a href="{% url 'nuevouser' %}" class="btn btn-primary">Agregar Usuario</a>
+              </div>
+
+            <div class="table-responsive py-3">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>CODIGO</th>
+                            <th>NOMBRE</th>
+                            <th>DESCRIPCION</th>
+                            <th>IMG</th>
+                            <th colspan="5">Opciones</th> 
+                            <th></th>                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for U in Usuarios %}
+                            <tr>
+                                <td>{{u.codigo}}</td>
+                                <td>{{u.nombre}}</td>
+                                <td>{{u.desc}}</td>               
+                                <td><img src="{{u.img.url}}" alt="" width="50px"></td>
+                                <td><a name="" id="" href="editarnoti/{{not.codigo}}" class="btn btn-primary">Editar</a>|</td>
+                                <td><a name="" id="" href="eliminoti/{{not.codigo}}" class="btn btn-danger btnEliminacion">Borrar</a></td> 
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

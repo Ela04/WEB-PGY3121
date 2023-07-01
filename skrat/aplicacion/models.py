@@ -27,11 +27,9 @@ class Noticias(models.Model):
   def delete(self, using=None, keep_parents=False):
     self.img.storage.delete(self.img.name)
     return super().delete()
-  
 
-
-'''
-class Nosotros(models.Model):
+#Usuario
+class Usuarios(models.Model):
   codigo = models.CharField(primary_key=True, max_length=4, verbose_name='codigo')
   nombre = models.CharField(max_length=50, verbose_name='nombre')
   desc = models.CharField(max_length=255, verbose_name='Contenido')
@@ -47,5 +45,3 @@ class Nosotros(models.Model):
   def delete(self, using=None, keep_parents=False):
     self.img.storage.delete(self.img.name)
     return super().delete()
-
-'''

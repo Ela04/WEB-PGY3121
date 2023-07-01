@@ -1,6 +1,6 @@
 {% extends "../Base.html" %}
 
-{% block title %} Nueva | Noticia {% endblock %}
+{% block title %} Nueva | Usuario {% endblock %}
 {% block body %}
     <div class="col-sm-12">
             {% if messages %}
@@ -12,9 +12,9 @@
             {% endfor %}
             {% endif %}
 
-            <h1>Nueva Noticia</h1>
+            <h1>Nuevo Usuario</h1>
             <div class="container form">
-                {% include 'gestion/form.html' %}
+                {% include 'gestionuser/form.html' %}
             </div>
     </div>
 {% endblock %}

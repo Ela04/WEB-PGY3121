@@ -20,7 +20,7 @@
     <!-- BARRA DE ARRIBA -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'home' %}">
           <img src="{% static 'img/caosnew.png' %}" alt="" width="60" height="60" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -49,8 +49,8 @@
             </li>
           </ul>
           <form class="d-flex my-2 my-lg-0">
-            <input class="form-control me-sm-2" type="text" placeholder="...">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            <input style="background-color: rgb(215, 220, 224);"  class="form-control me-sm-2" type="text" placeholder="...">
+            <button  class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
       </div>

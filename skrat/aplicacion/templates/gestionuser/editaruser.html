@@ -1,0 +1,61 @@
+{% extends "../Base.html" %}
+
+{% block title %} Editar | Usuario {% endblock %}
+
+{% block body %}
+
+    <div class="col-sm-12">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong class="text-dark">{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <h1>Editar Usuario</h1>
+        <div class="container form">
+            {% include 'gestionuser/form.html' %}
+        </div>
+    </div>
+<!--  I don't know
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <h2>Edición de Noticias</h2>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/editarnoti/" method="POST">{% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" id="txtCodigo" name="txtCodigo" value="{{not.codigo}}" class="form-control" placeholder="Código"
+                                minlength="6" maxlength="6" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="txtAutor" name="txtAutor" value="{{not.autor}}" class="form-control" placeholder="Autor"
+                                minlength="6" maxlength="60" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="txtNombre" name="txtNombre" value="{{not.nombre}}" class="form-control" placeholder="Nombre"
+                                maxlength="50" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date" name="date" value="{{not.fecha}}" class="form-control" placeholder=""
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="txtContenido" name="txtContenido" value="{{not.contenido}}" class="form-control" placeholder="Contenido"
+                                maxlength="2250" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="image" id="img" name="img" value="{{not.img}}" class="form-control" placeholder="img" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+{% endblock %}

@@ -5,10 +5,6 @@ from django.conf.urls.static import static
 from django.conf import settings 
 from django.contrib import admin
 
-
-
-
-
 urlpatterns = [
     path('', views.home, name='home'),
     path('Contactanos', views.Contactanos, name='Contactanos'),
@@ -23,6 +19,11 @@ urlpatterns = [
     path('eliminoti/<codigo>', views.eliminoti, name='eliminoti'),
 
     #Gestion de usuarios
+    path('gestionuser', views.gestionuser, name='gestionuser'),
+    path('nuevouser', views.nuevouser, name='nuevouser'),
+    path('editaruser/<codigo>', views.editaruser, name='editaruser'),
+    path('elimiuser/<codigo>', views.elimiuser, name='elimiuser'),
+    
     #path('login', views.login, name='login'),
     path('salir', views.salir, name='salir'),
 ]

@@ -1,6 +1,6 @@
 #Crear clases para formularios
 from django import forms
-from .models import Noticias
+from .models import Noticias, Usuarios
 from django.forms import ModelForm
 
 #Para ingresar noticias
@@ -10,11 +10,10 @@ class NoticiasForm(ModelForm):
         #fields =['codigo','autor','nombre','fecha','contenido', 'img']
         
         fields = "__all__"
-'''
-class NosotrosForm(ModelForm):
+
+class UsuarioForm(ModelForm):
     class Meta:
-        model= Nosotros
-        #fields =['codigo','autor','nombre','fecha','contenido', 'img']
+        model= Usuarios
+        #fields =['codigo', 'nombre','desc','img']
         
         fields = "__all__"
-'''

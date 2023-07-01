@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Noticias, AreaNoticias
+from .models import Usuarios, Noticias, AreaNoticias
 
 # Register your models here.
 admin.site.register(Noticias)
 admin.site.register(AreaNoticias)
-#admin.site.register(Nosotros)
+admin.site.register(Usuarios)
