@@ -27,21 +27,3 @@ class Noticias(models.Model):
   def delete(self, using=None, keep_parents=False):
     self.img.storage.delete(self.img.name)
     return super().delete()
-
-#Usuario
-class Usuarios(models.Model):
-  codigo = models.CharField(primary_key=True, max_length=4, verbose_name='codigo')
-  nombre = models.CharField(max_length=50, verbose_name='nombre')
-  desc = models.CharField(max_length=255, verbose_name='Contenido')
-  img =models.ImageField(upload_to='media/aut/', null=True, blank=True,verbose_name='img')
-  
-  #Funcion para ordenar por el nombre
-  def __str__(self):
-    return str(self.nombre)
-  class Meta:
-    ordering =['nombre']
-
-  #Funcion para eliminar
-  def delete(self, using=None, keep_parents=False):
-    self.img.storage.delete(self.img.name)
-    return super().delete()

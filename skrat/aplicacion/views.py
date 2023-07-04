@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import Noticias, AreaNoticias, Usuarios
+from .models import Noticias, AreaNoticias
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from .forms import NoticiasForm, UsuarioForm
+from .forms import NoticiasForm
 
 def home(request):
   return render(request,'home.html')
@@ -17,10 +17,7 @@ def Noticiass(request):
   noti = Noticias.objects.all()
   context = {"Noticiass": noti}
   return render(request,'Noticias.html', context)
-def Usuarioss(request):
-   usua = Usuarios.objects.all()
-   context = {"Usuarioss": usua}
-   return render(request,'Nosotros.html', context)
+
 
 #Gestion de Noticias
 @login_required
@@ -51,42 +48,18 @@ def eliminoti(request, codigo):
     messages.success(request, '¡Noticia Eliminada!')
     return redirect('gestionoti')
 
-#Gestion de Usuarios
-@login_required
-def gestionuser(request):
-  usua = Usuarios.objects.all()
-  context = {"Usuarioss": usua}
-  return render(request,'gestionuser/gestionuser.html',context)
-#Crud -> Crear, Leer, Actualizar y Borrar
-@login_required
-def nuevouser(request):
-    formulario = UsuarioForm(request.POST or None, request.FILES or None)
-    if formulario.is_valid():
-       formulario.save()
-       return redirect('gestionuser')
-    return render(request, "gestionuser/nuevouser.html", {"formulario": formulario})
-@login_required
-def editaruser(request, codigo):
-    usua = Usuarios.objects.get(codigo=codigo)
-    formulario = UsuarioForm(request.POST or None, request.FILES or None, instance=usua)
-    if formulario.is_valid() and request.POST:
-       formulario.save()
-       return redirect('gestionuser')
-    return render(request, "gestionuser/editaruser.html", {"formulario": formulario})
-@login_required
-def elimiuser(request, codigo):
-    usua = Usuarios.objects.get(codigo=codigo)
-    Usuarios.delete()
-    messages.success(request, '¡Usuario Eliminada!')
-    return redirect('gestionuser')
-
-
 def login(request):
     return render(request, "login.html")
 
 def salir(request):
     logout(request)
     return redirect('/')
+
+#def menu(request):
+#   request.session["usuario"]="JCO"
+#   usuario=request.session["usuario"]
+#   context = {"usuario": usuario}
+#   return render(request, 'home.html', context)
 
 #from django.http import HttpResponse
 #def aplicacion1(request):
