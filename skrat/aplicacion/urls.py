@@ -16,13 +16,13 @@ urlpatterns = [
 
     #C 
     path('nuevanoti/', views.nuevanoti, name='nuevanoti'),
-    path('nuevousuario', views.nuevousuario, name='nuevousuario'),
+    path('nuevousuario/<int:user_id>/', views.nuevousuario, name='nuevousuario'),
     #R
     path('gestionoti', views.gestionoti, name='gestionoti'),
     path('gestionusuario', views.gestionusuario, name='gestionusuario'),
     #U
     path('editarnoti/<codigo>/', views.editarnoti, name='editarnoti'),
-    path('editarusuario', views.editarusuario, name='editarusuario'),
+    path('editarusuario/<int:user_id>/', views.editarusuario, name='editarusuario'),
     #D
     path('eliminoti/<codigo>/', views.eliminoti, name='eliminoti'),
     path('elimiusuario', views.elimiusuario, name='elimiusuario'),

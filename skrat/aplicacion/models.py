@@ -1,7 +1,12 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser, Group, Permission
 
 # Create your models here.
+class User(AbstractUser):
+    img = models.ImageField(upload_to='profile_images/', blank=True, null=True)
+    groups = models.ManyToManyField(Group, related_name='custom_user_set')
+    user_permissions = models.ManyToManyField(Permission, related_name='custom_user_set')
+
 class AreaNoticias(models.Model):
   idArea = models.AutoField(db_column='idArea', primary_key=True) 
   Descripcion = models.CharField(max_length=30, blank=False, null=False)
@@ -14,7 +19,7 @@ class Noticias(models.Model):
   autor = models.CharField(max_length=50, verbose_name='autor')
   nombre = models.CharField(max_length=50, verbose_name='nombre')
   fecha = models.DateField(auto_now=False, verbose_name='fecha')
-  Contenido = models.CharField(max_length=255, verbose_name='Contenido')
+  Contenido = models.TextField(max_length=255, verbose_name='Contenido')
   idArea = models.ForeignKey('AreaNoticias',on_delete=models.CASCADE, db_column='idArea', verbose_name='idArea')
   img =models.ImageField(upload_to='media/img/', null=True, blank=True,verbose_name='img')
   

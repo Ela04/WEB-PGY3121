@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from .models import User, Noticias
+from .models import Noticias
 from django.contrib import messages
 from .forms import NoticiasForm
 
@@ -46,8 +47,8 @@ def nuevousuario(request):
 #R
 @login_required
 def gestionoti(request):
-  noticias = Noticias.objects.all()
-  context = {"Noticiass": noticias}
+  Noti = Noticias.objects.all()
+  context = {"Noticiass": Noti}
   return render(request,'gestion/gestionoti.html', context)
 @user_passes_test(lambda u: u.is_superuser)
 def gestionusuario(request):
@@ -66,29 +67,29 @@ def editarnoti(request, codigo):
     return render(request, "gestion/editarnoti.html", {"formulario": formulario})
 @login_required
 def editarusuario(request, user_id):
-    user = get_object_or_404(User, id=user_id)
+    usuario = get_object_or_404(User, id=user_id)
     if request.method == 'POST':
-        form = UserChangeForm(request.POST, instance=user)
+        form = UserChangeForm(request.POST, instance=usuario)
         if form.is_valid():
             form.save()
             messages.success(request, 'Usuario actualizado exitosamente.')
             return redirect('gestionusuario')
     else:
-        form = UserChangeForm(instance=user)
-    context = {'form': form,'user': user}
+        form = UserChangeForm(instance=usuario)
+    context = {'form': form, 'user': usuario}
     return render(request, 'gestion/editarusuario.html', context)
 
 #D
 @login_required
 def eliminoti(request, codigo):
-    Notic = Noticias.objects.get(codigo=codigo)
+    Noti = Noticias.objects.get(codigo=codigo)
     Noticias.delete()
     messages.success(request, '¡Noticia Eliminada!')
     return redirect('gestionoti')
 @login_required
 def elimiusuario(request, codigo):
-    user = User.objects.get(codigo=codigo)
-    User.delete()
+    usuarios = User.objects.all()
+    usuarios.delete()
     messages.success(request, '¡Usuario Eliminado!')
     return redirect('gestionusuario')
 

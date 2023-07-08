@@ -22,14 +22,14 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>ID Area</th>
                             <th>CODIGO</th>
                             <th>AUTOR</th>
                             <th>NOMBRE</th>
                             <th>FECHA</th>
                             <th>CONTENIDO</th>
                             <th>IMG</th>
-                            <th colspan="5">Opciones</th> 
+                            <th colspan="4">Opciones</th> 
                             <th></th>                           
                         </tr>
                     </thead>
@@ -43,8 +43,10 @@
                                 <td>{{not.fecha}}</td>
                                 <td>{{not.contenido}}</td>                        
                                 <td><img src="{{not.img.url}}" alt="" width="50px"></td>
-                                <td><a name="" id="" href="editarnoti/{{not.codigo}}" class="btn btn-primary">Editar</a></td><td>
-                                |</td><td><a name="" id="" href="eliminoti/{{not.codigo}}" class="btn btn-danger btnEliminacion">Borrar</a></td> 
+                                <td><a href="{% url 'editarnoti' not.codigo %}" class="btn btn-primary">Editar</a></td>
+                                <td>|</td>
+                                <td><a href="{% url 'eliminoti' not.codigo %}" class="btn btn-danger btnEliminacion">Borrar</a></td>
+
                             </tr>
                         {% endfor %}
                     </tbody>
