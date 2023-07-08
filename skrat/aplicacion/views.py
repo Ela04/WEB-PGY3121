@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from .models import Noticias
+from .models import Noticias, UserProfile
 from django.contrib import messages
 from .forms import NoticiasForm
 
@@ -50,10 +50,9 @@ def gestionoti(request):
   Noti = Noticias.objects.all()
   context = {"Noticiass": Noti}
   return render(request,'gestion/gestionoti.html', context)
-@user_passes_test(lambda u: u.is_superuser)
 def gestionusuario(request):
-    usuarios = User.objects.all()
-    context = {'usuarios': usuarios}
+    perfiles = UserProfile.objects.all()
+    context = {'perfiles': perfiles}
     return render(request, 'gestion/gestionusuario.html', context)
 
 #U
@@ -67,16 +66,16 @@ def editarnoti(request, codigo):
     return render(request, "gestion/editarnoti.html", {"formulario": formulario})
 @login_required
 def editarusuario(request, user_id):
-    usuario = get_object_or_404(User, id=user_id)
+    user = get_object_or_404(User, id=user_id)
     if request.method == 'POST':
-        form = UserChangeForm(request.POST, instance=usuario)
+        form = UserChangeForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
             messages.success(request, 'Usuario actualizado exitosamente.')
             return redirect('gestionusuario')
     else:
-        form = UserChangeForm(instance=usuario)
-    context = {'form': form, 'user': usuario}
+        form = UserChangeForm(instance=user)
+    context = {'form': form, 'user': user}
     return render(request, 'gestion/editarusuario.html', context)
 
 #D

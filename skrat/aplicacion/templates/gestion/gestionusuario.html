@@ -30,20 +30,21 @@
             </tr>
           </thead>
           <tbody>
-            {% for user in usuarios %}
+            {% for perfil in perfiles %}
               <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.username }}</td>
-                <td>{{ user.email }}</td>
+                <td>{{ perfil.user.id }}</td>
+                <td>{{ perfil.user.username }}</td>
+                <td>{{ perfil.user.email }}</td>
                 <td>
-                  {% if user.profile_image %}
-                    <img src="{{ user.profile_image.url }}" alt="">
+                  {% if perfil.img %}
+                    <img src="{{ perfil.img.url }}" alt="">
                   {% else %}
-                    <img src="{% static 'img/juen.jpg' %}" alt="">
+                    <img src="{% static 'img/default_profile.jpg' %}" alt="">
                   {% endif %}
-                  <td>
-                  <a href="{% url 'editarusuario' user.id %}" class="btn btn-primary">Editar</a>
-                  <a href="{% url 'elimiusuario' user.id %}" class="btn btn-danger">Eliminar</a>
+                </td>
+                <td>
+                  <a href="{% url 'editarusuario' perfil.user.id %}" class="btn btn-primary">Editar</a>
+                  <a href="{% url 'elimiusuario' perfil.user.id %}" class="btn btn-danger">Eliminar</a>
                 </td>
               </tr>
             {% endfor %}

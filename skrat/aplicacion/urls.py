@@ -16,7 +16,7 @@ urlpatterns = [
 
     #C 
     path('nuevanoti/', views.nuevanoti, name='nuevanoti'),
-    path('nuevousuario/<int:user_id>/', views.nuevousuario, name='nuevousuario'),
+    path('nuevousuario/', views.nuevousuario, name='nuevousuario'),
     #R
     path('gestionoti', views.gestionoti, name='gestionoti'),
     path('gestionusuario', views.gestionusuario, name='gestionusuario'),
