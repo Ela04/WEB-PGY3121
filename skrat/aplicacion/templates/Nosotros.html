@@ -23,9 +23,11 @@
             a ser reconocidos por nuestra excelencia periodística y por promover un mundo informado y empoderado.</p>
             <p>&nbsp;</p>
         <h3>EQUIPO</h3>
-        <div class="p-2">
-            <a style="background-color: green; border: 2px solid black;" href="{% url 'gestionuser'%}" class="btn btn-primary">Gestion Usuarios</a>
-        </div>
+        {% if user.is_superuser %}
+          <div class="p-2">
+              <a style="background-color: green; border: 2px solid black;" href="{% url 'gestionusuario' %}" class="btn btn-primary">Gestionar Usuarios</a>
+          </div>
+        {% endif %}
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <!--  DESDE BASE DE DATOS -->
             {% for u in Usuarios %}

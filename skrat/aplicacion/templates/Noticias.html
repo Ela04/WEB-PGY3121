@@ -6,9 +6,11 @@
     <div>
         <h1>Noticias!</h1>
     </div>
+    {% if user.is_superuser %}
       <div class="p-2">
-        <a style="background-color: green; border: 2px solid black;" href="{% url 'gestionoti'%}" class="btn btn-primary">Gestion Noticias</a>
+        <a style="background-color: green; border: 2px solid black;" href="{% url 'gestionoti' %}" class="btn btn-primary">Gestionar Noticias</a>
       </div>
+    {% endif %}
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <!--  DESDE BASE DE DATOS -->
         {% for not in Noticiass %}

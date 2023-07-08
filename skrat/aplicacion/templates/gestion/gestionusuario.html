@@ -1,0 +1,50 @@
+{% extends "../Base.html" %}
+
+{% block title %} Gestión | Usuarios {% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-sm-12">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      <h1>Listado de Usuarios</h1>
+      <div class="">
+        <a href="{% url 'nuevousuario' %}" class="btn btn-primary">Agregar Usuario</a>
+      </div>
+
+      <div class="table-responsive py-3">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Img</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for user in User %}
+              <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td><img src="{{user.img.url}}" alt="" width="50px"></td>
+                <td>
+                  <a href="{% url 'editarusuario' user.id %}" class="btn btn-primary">Editar</a>
+                  <a href="{% url 'elimiusuario' user.id %}" class="btn btn-danger">Eliminar</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}
